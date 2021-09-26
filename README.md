@@ -39,11 +39,18 @@ Returns a specific ChessPiece
 
 [PUT] `/chesspiece/{id}/`:
 Update a specific ChessPiece with the request body attributes
+- Request body example:
+```
+{
+	"type": "bishop", // or: "pawn" || "rook" || "knight" || "queen" || "king"
+	"color": "d", // for 'dark', or "l" for 'light'
+}
+```
 
 [DELETE] `/chesspiece/{id}/`:
 Delete a specific ChessPiece
 
-[POST] `/position/{id}/{position}`:
+[GET] `/position/{id}/{position}`:
 Returns a list of all possible positions after two moves of a ChessPiece
 - Use the standard chess notation
 - request params example: `localhost:8000/position/40/h4`
