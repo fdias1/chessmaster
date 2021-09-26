@@ -1,1 +1,4 @@
 /chess-frontend/node_modules
+/chess-backend/Lib
+/chess-backend/Scripts
+/chess-backend/pyvenv.cfg
