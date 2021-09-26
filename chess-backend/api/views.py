@@ -58,15 +58,13 @@ class ChessPieceMovements(APIView):
         if chess_piece.type == 'pawn':
             mult = 1 if chess_piece.color == 'l' else -1
 
-            pos_1 = ChessPiecePosition(x_pos=pos.x_pos, y_pos=(pos.y_pos+1*mult))
-            pos_2 = ChessPiecePosition(x_pos=pos.x_pos, y_pos=(pos.y_pos+2*mult))
-            pos_3 = ChessPiecePosition(x_pos=pos.x_pos, y_pos=(pos.y_pos+3*mult))
+            pos_1 = ChessPiecePosition(x_pos=pos.x_pos, y_pos=(pos.y_pos+2*mult))
+            pos_2 = ChessPiecePosition(x_pos=pos.x_pos, y_pos=(pos.y_pos+3*mult))
 
             if pos_1.is_valid: possible_positions.append(pos_1.chess_pos)
-            if pos_2.is_valid: possible_positions.append(pos_2.chess_pos)
 
             if (chess_piece.color == 'l' and pos.y_pos == 2) or (chess_piece.color == 'd' and pos.y_pos == 7):
-                if pos_3.is_valid: possible_positions.append(pos_3.chess_pos)
+                if pos_2.is_valid: possible_positions.append(pos_2.chess_pos)
 
         ## King can move in any direction but just one square at a time
         if chess_piece.type == 'king':
