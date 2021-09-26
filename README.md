@@ -11,8 +11,9 @@
 - npm
 
 ### Running the project
-1. Download repository: `git clone https://github.com/fdias1/chessmaster`
-2. Run backend application: `$ cd ./chess-backend && python manage.py runserver`
+1. Download repository: `$ git clone https://github.com/fdias1/chessmaster && cd chessmaster`
+2. Get back-end requirements: `$ cd ./chess-backend && pip3 install -r requirements.txt`
+2. Run backend application: `$ python manage.py runserver`
 3. Get the front-end depedencies: `$ cd ../chess-frontend && npm install`
 4. Run front-end web app: `$ npm start`
 
